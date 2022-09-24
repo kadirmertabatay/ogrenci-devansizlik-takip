@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devamsızlık Takip</title>
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+background-color: #3498DB;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+.box1{
+    width: 1300px;
+    height: 500px;
+    text-align: center;
+    border: 5px solid #3498DB;
+    /* background: #3498DB; */
+    margin: 100px;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-radius: 9px;
+    text-align: right;
+  }
+  h1{
+    background: #3498DB;
+    color: white;
+    text-align: center;
+    margin: 450px ;
+    border-radius: 9px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-style: italic;
+
+  }
+  .zamansecim{
+    text-align: center;
+    background: #3498DB;
+    color: white;
+    margin: 450px ;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    border-radius: 9px;
+    font-style:italic;
+    font-weight: bold;
+  }
+  .kyt_btn{
+    color:white;
+      font-size: 1.5em;
+      display: inline-block;
+      background: #3498DB;
+      padding: 10px;
+      text-decoration: none;/*altındaki çizgiyi kaldırır*/
+      border-radius: 9px;
+      margin: 680px;;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      width: 150px;
+      text-align: center;
+  }
+  .kyt_btn:hover{
+    background: white;
+       color: #3498DB;
+       border: 1px solid #3498DB;
+
+  }
+  .günler{
+    background: #3498DB;
+    color: white;
+    font-size: 1.5em;
+    display: inline-block;
+    padding-right: top;
+    text-decoration: none;
+    border-radius: 9px;
+    text-align: center;
+    width: 150px;
+  }
+  .isimler{
+    text-align: left;
+    font-size: 16px;
+    background: #3498DB;
+    color: white;
+    margin-right: 1100px;
+  }
+  .tablo{
+    width: 100%;
+    
+  }
+  th,td{
+    border: 3px solid green;
+    text-align: center;
+    width: 100px;
+    
+  }
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+  
+}
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            Kurum Sayfası
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="ogrenci_kayıt.html" target="_blank">Öğrenci Kayıt</a>
+          <a href="velikayıt.html" target="_blank">Veli Kayıt</a>
+          <a href="kayıt_sil.html" target="_blank">Kayıt Silme</a>
+          <a href="ogretmenkayıt.html" class="_blank">Öğretmen Kayıt</a>
+          <a href="dersprogramkyt.html" class="_blank">Ders Programı Kayıt</a>
+
+        </div>
+      </div>
+
+      
+
+      <h1>Öğrenciler Devamsızlık Durumu</h1>
+
+      <div class="zamansecim">
+        Tarih seçiniz : 
+        <input type="date">
+      </div>
+
+      <div class="zamansecim">
+        Sınıf seçiniz : 
+        <select name="degree" id="degree">
+          <option value="bachellor">12</option>
+          <option value="bachellor">11</option>
+          <option value="bachellor">10</option>
+          <option value="bachellor">9</option>
+          <option value="bachellor">8</option>
+        </select>
+        <select name="degree" id="degree">
+          <option value="bachellor">A</option>
+          <option value="bachellor">B</option>
+          <option value="bachellor">C</option>
+          <option value="bachellor">D</option>
+          <option value="bachellor">E</option>
+        </select>
+      </div>
+
+
+<!-- 
+      <div class="box1">
+        <div class="günler_kutusu">
+          <a href="" class="günler">Pazartesi</a>
+          <a href="" class="günler">Salı</a>
+          <a href="" class="günler">Çarşamba</a>
+          <a href="" class="günler">Perşembe</a>
+          <a href="" class="günler">Cuma</a>
+          <a href="" class="günler">Cumartesi</a>
+          <a href="" class="günler">Pazar</a>
+        </div>
+        <div class="isimler">
+          <p>xxxx xxxx xxxxxx</p>
+          <p>aaaa aaaa aaaaaa</p>
+          <p>bbbb bbbb bbbbbb</p>
+        </div>
+      </div> -->
+
+
+      <div class="box1">
+        <table class="tablo">
+          <tr>
+          <th>Öğrenci Adı</th>
+          <th>Pazartesi</th>
+          <th>Salı</th>
+          <th>Çarşamba</th>
+          <th>Perşembe</th>
+          <th>Cuma</th>
+          <th>Cumartesi</th>
+          <th>Pazar</th>
+          </tr>
+          <tr>
+            <td>Kadir Mert Abatay</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+          </tr>
+        </table>
+      </div>
+
+     
+      <a href="#" class="kyt_btn">Kaydet</a>
+
+</body>
+</html>
+
+
+
+
